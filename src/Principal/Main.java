@@ -1,3 +1,5 @@
+package Principal;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,15 +10,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("lesvues/createaccount.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 1300, 700));
+        Parent root = FXMLLoader.load(getClass().getResource("../lesvues/createaccount.fxml"));
+        primaryStage.setTitle("CREATE ACCOUNT");
+        primaryStage.setScene(new Scene(root, 1300, 900));
+        primaryStage.setResizable(false);
         primaryStage.show();
 
 
-
     }
-
 
     public static void main(String[] args) {
         launch(args);

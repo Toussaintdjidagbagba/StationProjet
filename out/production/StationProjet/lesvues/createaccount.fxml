@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CreateaccountController">
+<AnchorPane prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CreateaccountController">
    <children>
-      <ImageView fitHeight="200.0" fitWidth="300.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="75.0">
+      <ImageView fitHeight="100.0" fitWidth="300.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="25.0">
          <rotationAxis>
             <Point3D />
          </rotationAxis></ImageView>
@@ -22,7 +22,7 @@
             <Font name="Centaur" size="50.0" />
          </font>
       </Label>
-      <Label contentDisplay="RIGHT" layoutX="410.0" layoutY="385.0" text="TELEPHONE " AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="450.0">
+      <Label contentDisplay="RIGHT" layoutX="410.0" layoutY="385.0" text="MOT DE PASSE" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="450.0">
          <font>
             <Font name="Centaur" size="50.0" />
          </font>
@@ -42,15 +42,59 @@
             <Font name="Centaur" size="50.0" />
          </font>
       </Label>
-      <TextArea id="EMAIL" prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="800.0" AnchorPane.topAnchor="300.0">
+      <TextArea id="EMAIL" fx:id="EMAIL" prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="800.0" AnchorPane.topAnchor="300.0">
          <font>
             <Font size="16.0" />
          </font></TextArea>
-      <TextArea id="IDENTIFIANT" layoutX="810.0" layoutY="310.0" prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="800.0" AnchorPane.topAnchor="375.0">
+      <TextArea id="IDENTIFIANT" fx:id="IDENTIFIANT" layoutX="810.0" layoutY="310.0" prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="800.0" AnchorPane.topAnchor="375.0">
          <font>
             <Font size="16.0" />
          </font></TextArea>
-      <Spinner id="TEL" fx:id="TEL" editable="true" layoutX="810.0" layoutY="385.0" prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="800.0" AnchorPane.topAnchor="450.0" />
-      <Button graphicTextGap="6.0" mnemonicParsing="false" text=" VALIDER INSCRIPTION" textAlignment="CENTER" />
+      <TextArea id="PASSWORD" fx:id="TEL" accessibleRole="SPINNER" editable="true" layoutX="810.0" layoutY="385.0" prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="800.0" AnchorPane.topAnchor="450.0" />
+      <Button id="VALIDE" fx:id="VALIDE" graphicTextGap="6.0" mnemonicParsing="false" onMouseClicked="#valide" prefHeight="50" prefWidth="250" text=" VALIDER INSCRIPTION" textAlignment="CENTER" AnchorPane.leftAnchor="847.0" AnchorPane.topAnchor="650.0">
+         <font>
+            <Font size="21.0" />
+         </font></Button>
+      <Label contentDisplay="RIGHT" layoutX="410.0" layoutY="310.0" text="PRENOM" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="225.0">
+         <font>
+            <Font name="Centaur" size="50.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="RIGHT" layoutX="420.0" layoutY="235.0" text="NOM" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Centaur" size="50.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="RIGHT" layoutX="760.0" layoutY="310.0" text=":" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="225.0">
+         <font>
+            <Font name="Centaur" size="50.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="RIGHT" layoutX="760.0" layoutY="235.0" text=":" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Centaur" size="50.0" />
+         </font>
+      </Label>
+      <TextArea id="PRENOM" fx:id="PRENOM" layoutX="810.0" layoutY="310.0" prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="800.0" AnchorPane.topAnchor="225.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+      <TextArea id="NOM" fx:id="NOM" layoutX="810.0" layoutY="235.0" prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="800.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextArea>
+      <Label contentDisplay="RIGHT" layoutX="410.0" layoutY="460.0" text="TELEPHONE " AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="525.0">
+         <font>
+            <Font name="Centaur" size="50.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="RIGHT" layoutX="760.0" layoutY="460.0" text=":" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="525.0">
+         <font>
+            <Font name="Centaur" size="50.0" />
+         </font>
+      </Label>
+      <TextArea id="TEL" fx:id="TEL1" accessibleRole="SPINNER" editable="true" layoutX="810.0" layoutY="460.0" prefHeight="50.0" prefWidth="300.0" AnchorPane.leftAnchor="800.0" AnchorPane.topAnchor="525.0" />
    </children>
 </AnchorPane>
